@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF8F3">
+<meta name="description" content="Alpha Productions: wedding, newborn, baby shower, portrait and corporate photography and videography. Studio and on-location shoots. Packages from Rs 20,999.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/logo.jpg">
+<title>Alpha Productions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind:wght@500;600&text=%E2%82%B9&display=swap">
+<style>
+body{margin:0}
+img{max-width:100%;height:auto}
+[hidden]{display:none!important}
+/* Layout: a photographer's contact sheet. Warm ivory paper, the logo's navy for type and the saffron leaf for action, photos run in film-strip rows with frame numbers. Single deliberate light theme. */
+:root{
+  --bg:#FBF8F3;
+  --card:#F2ECE2;
+  --line:#E4DACB;
+  --ink:#141B3D;
+  --navy:#1F2D78;
+  --ink-2:#434A6B;
+  --muted:#7B7F96;
+  --saffron:#E58A23;
+  --saffron-deep:#C4701A;
+  --night:#0F1430;
+  --display:"Gloock","Hind",Georgia,serif;
+  --body:"Manrope","Hind","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+a{color:inherit}
+img{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(44px,6vw,84px);line-height:1}
+h2{font-size:clamp(34px,4.4vw,56px);line-height:1.05}
+h3{font-size:clamp(21px,2vw,25px);line-height:1.2}
+p{margin:0}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 26px;border:0;border-radius:4px;cursor:pointer;font:700 16px/1 var(--body);text-decoration:none;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s}
+.btn-saffron{background:var(--saffron);color:#fff}
+.btn-saffron:hover{background:var(--saffron-deep)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--ink)}
+.btn-line{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn-line:hover{background:var(--navy);color:#fff}
+
+.sample{background:var(--night);color:#D6DAF0;font-size:14px;line-height:1.4;padding-block:9px;text-align:center}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:41;background:var(--bg)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(251,248,243,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:62px;height:auto;mix-blend-mode:multiply}
+.brand b{font:800 15px/1.1 var(--body);letter-spacing:.06em;color:var(--navy)}
+.brand b span{display:block;color:var(--saffron)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:600}
+.nav ul a{text-decoration:none;color:var(--ink-2)}
+.nav ul a:hover{color:var(--saffron-deep)}
+.nav .btn{min-height:42px;padding:10px 18px;font-size:15px}
+@media (max-width:900px){.nav ul{display:none}.nav{min-height:60px}.brand img{width:52px}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:52px;align-items:center;padding-block:48px 64px}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.hero .eyebrow{font-size:15px;font-weight:700;color:var(--saffron-deep)}
+.hero h1 em{font-style:normal;color:var(--navy)}
+.hero .lede{font-size:clamp(17px,1.5vw,19px);color:var(--ink-2);max-width:46ch}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{font-size:14px;font-weight:700;padding:8px 14px;border-radius:999px;background:var(--card);color:var(--ink-2)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.sheet{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:10px;min-width:0;height:min(560px,62vw)}
+.sheet figure{margin:0;overflow:hidden;border-radius:4px;background:var(--card);position:relative}
+.sheet figure:first-child{grid-row:1/3}
+.sheet img{width:100%;height:100%;object-fit:cover}
+.fr{position:absolute;left:8px;bottom:8px;font:700 11px/1 var(--body);letter-spacing:.08em;color:#fff;background:rgba(15,20,48,.6);padding:5px 7px;border-radius:3px;font-variant-numeric:tabular-nums}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:26px;padding-block:20px 48px}
+  .sheet{order:-1;height:min(118vw,520px);gap:6px}
+  .cta .btn{flex:1 1 150px}
+}
+
+/* film strip */
+.strip{background:var(--night);padding-block:14px;overflow:hidden;position:relative}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,transparent 0 10px,#2A3266 10px 22px)}
+.strip::before{top:3px}.strip::after{bottom:3px}
+.strip .row{display:flex;gap:8px;width:max-content;animation:roll 80s linear infinite}
+.strip figure{margin:0;width:150px;aspect-ratio:3/4;flex:none;overflow:hidden;border-radius:2px}
+.strip img{width:100%;height:100%;object-fit:cover}
+@keyframes roll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.strip .row{animation:none}}
+
+section{padding-block:clamp(64px,8vw,104px)}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-bottom:32px}
+.head p{color:var(--ink-2);max-width:46ch;justify-self:end}
+@media (max-width:800px){.head{grid-template-columns:1fr;gap:12px;margin-bottom:24px}.head p{justify-self:start}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 18px}
+@media (max-width:900px){.svc{grid-template-columns:1fr 1fr;gap:22px 10px}}
+.sv{display:grid;gap:10px;align-content:start;min-width:0;text-decoration:none}
+.sv figure{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:var(--card);position:relative}
+.sv img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.sv:hover img{transform:scale(1.04)}
+.sv p{font-size:15px;color:var(--ink-2);line-height:1.45}
+.sv .go{font-size:14.5px;font-weight:700;color:var(--saffron-deep)}
+@media (max-width:600px){.sv h3{font-size:19px}.sv p{display:none}}
+
+/* packages */
+.pk-sec{background:var(--card)}
+.pk{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:stretch}
+@media (max-width:1000px){.pk{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.pk{grid-template-columns:1fr}}
+.plan{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px 22px;display:grid;gap:16px;align-content:start;position:relative}
+.plan.top{background:var(--night);color:#fff;border-color:var(--night)}
+.plan .tier{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--saffron-deep)}
+.plan.top .tier{color:var(--saffron)}
+.plan .pr{font:400 42px/1 var(--display);font-variant-numeric:lining-nums}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;font-size:15px}
+.plan li{position:relative;padding:8px 0 8px 24px;border-top:1px solid var(--line);line-height:1.4}
+.plan.top li{border-color:#2A3266;color:#D6DAF0}
+.plan li::before{content:"";position:absolute;left:0;top:12px;width:14px;height:14px;border-radius:50%;background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
+.plan.top li::before{background-color:var(--saffron)}
+.plan .btn{margin-top:4px}
+.plan.top .btn-line{color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+.pk-note{margin-top:18px;font-size:14.5px;color:var(--ink-2)}
+
+/* portfolio */
+.port{columns:4 220px;column-gap:10px}
+.port figure{margin:0 0 10px;break-inside:avoid;overflow:hidden;border-radius:4px;background:var(--card);position:relative}
+.port img{width:100%}
+@media (max-width:560px){.port{columns:2;column-gap:6px}.port figure{margin-bottom:6px}}
+.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:22px;padding-bottom:2px}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:none;font:700 15px/1 var(--body);padding:11px 16px;min-height:44px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* behind */
+.behind{background:var(--night);color:#fff}
+.behind .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media (max-width:860px){.behind .wrap{grid-template-columns:1fr;gap:28px}}
+.behind .ph{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.behind figure{margin:0;border-radius:4px;overflow:hidden;aspect-ratio:3/4}
+.behind figure:nth-child(2){margin-top:40px}
+.behind img{width:100%;height:100%;object-fit:cover}
+.behind .txt{display:grid;gap:18px}
+.behind p{color:#C9CEE8}
+.behind ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.behind li{position:relative;padding-left:18px;color:#E3E6F5;font-size:16px}
+.behind li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;background:var(--saffron);transform:rotate(45deg)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.steps li{border-top:1.5px solid var(--navy);padding-top:18px;display:grid;gap:8px;align-content:start}
+.steps .n{font:400 34px/1 var(--display);color:var(--saffron)}
+.steps p{color:var(--ink-2);font-size:16px}
+@media (max-width:860px){.steps{grid-template-columns:1fr;gap:0}.steps li{grid-template-columns:40px 1fr;column-gap:12px;border-top:1px solid var(--line);padding-block:18px}.steps li>*:not(.n){grid-column:2}.steps .n{grid-row:1/3}}
+
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1.6fr;gap:48px}
+@media (max-width:860px){.faq{grid-template-columns:1fr;gap:18px}}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;font-weight:700;font-size:18px;line-height:1.35;padding-block:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:none;width:11px;height:11px;border:solid var(--saffron);border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+details p{padding-bottom:20px;color:var(--ink-2);max-width:62ch}
+
+/* enquiry */
+.enq{background:var(--navy);color:#fff}
+.egrid{display:grid;grid-template-columns:1fr 1.2fr;gap:52px;align-items:start}
+@media (max-width:900px){.egrid{grid-template-columns:1fr;gap:28px}}
+.enq .side{display:grid;gap:16px}
+.enq .side p{color:#D6DAF0;font-size:18px;max-width:40ch}
+.enq .contact{display:grid;gap:4px;padding-top:16px;border-top:1px solid rgba(255,255,255,.2);color:#D6DAF0}
+.enq .contact b{color:var(--saffron)}
+form{background:var(--bg);color:var(--ink);border-radius:8px;padding:clamp(22px,3vw,32px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:560px){form{grid-template-columns:1fr}}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+label{font-size:15px;font-weight:700}
+input,select,textarea{font:400 16px/1.4 var(--body);padding:13px 14px;min-height:50px;border-radius:6px;border:1.5px solid var(--line);background:#fff;color:var(--ink);width:100%;-webkit-appearance:none;appearance:none}
+select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%231F2D78' stroke-width='1.8'/%3E%3C/svg%3E") right 14px center/12px no-repeat;padding-right:40px}
+input:focus,select:focus,textarea:focus{border-color:var(--navy);outline:none}
+textarea{min-height:88px;resize:vertical}
+.out{grid-column:1/-1;display:grid;gap:12px}
+.msg{background:var(--card);border-radius:6px;padding:16px;font-size:15px;white-space:pre-wrap;user-select:all;overflow-wrap:anywhere}
+.out .row{display:flex;gap:10px;flex-wrap:wrap}
+.out .row .btn{flex:1 1 180px}
+.err{grid-column:1/-1;color:#B3261E;font-size:15px}
+
+footer{padding-block:44px 30px;color:var(--ink-2)}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:15px}
+.copy{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:45;gap:12px;align-items:center;justify-content:space-between;background:var(--night);color:#fff;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));box-shadow:0 -6px 20px rgba(0,0,0,.2);transition:transform .25s}
+  .mbar.away{transform:translateY(110%)}
+  .mbar b{display:block;font:400 19px/1.1 var(--display)}
+  .mbar span{font-size:13px;color:#C9CEE8}
+  .mbar .btn{min-height:46px;padding:10px 20px}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+}
+</style>
+</head>
+<body>
+
+
+<div class="sample"><div class="wrap">Sample website made for Alpha Productions by Ten Bit, using photos and packages from your Instagram.</div></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Alpha Productions, back to top"><img src="img/logo.jpg" alt="" width="260" height="143"><b>ALPHA<span>PRODUCTIONS</span></b></a>
+    <ul>
+      <li><a href="#services">What we shoot</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#work">Our work</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-saffron" href="#enquire">Book a shoot</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Photography and videography</p>
+        <h1>Capturing your <em>precious moments.</em></h1>
+        <p class="lede">Weddings, newborns, baby showers, portraits and corporate events. Photographed and filmed by one team, in our studio or wherever your moment happens.</p>
+        <div class="tags"><span>Weddings</span><span>Newborn</span><span>Baby shower</span><span>Events</span><span>Studio and on-location</span></div>
+        <div class="cta">
+          <a class="btn btn-saffron" href="#enquire">Book a shoot</a>
+          <a class="btn btn-line" href="#packages">See packages</a>
+        </div>
+      </div>
+      <div class="sheet">
+        <figure><img src="img/bride-doors.jpg" alt="A bride in a pink silk saree smiling at carved temple doors" fetchpriority="high"><span class="fr">01A</span></figure>
+        <figure><img src="img/newborn-moon.jpg" alt="A newborn wrapped in blue, asleep in a moon prop on clouds"><span class="fr">02A</span></figure>
+        <figure><img src="img/couple-stairs.jpg" alt="A couple in ivory sitting on white steps"><span class="fr">03A</span></figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip" aria-hidden="true"><div class="row" id="strip"></div></div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <h2>What we shoot</h2>
+        <p>One team for photos and films, so both tell the same story. Tap any service to ask about your date.</p>
+      </div>
+      <div class="svc" id="svc"></div>
+    </div>
+  </section>
+
+  <section class="pk-sec" id="packages">
+    <div class="wrap">
+      <div class="head">
+        <h2>Packages</h2>
+        <p>Pick a starting point. We adjust any package to your functions, venue and number of days.</p>
+      </div>
+      <div class="pk">
+        <article class="plan">
+          <div class="tier">Package 2</div>
+          <div class="pr">₹20,999</div>
+          <ul><li>Full HD video</li><li>Unlimited pictures</li><li>180 edited photos</li><li>30-sheet album</li></ul>
+          <a class="btn btn-line" href="#enquire" data-pkg="Package 2 (₹20,999)">Choose this</a>
+        </article>
+        <article class="plan">
+          <div class="tier">Package 3</div>
+          <div class="pr">₹26,999</div>
+          <ul><li>Full HD video</li><li>Montage video</li><li>Unlimited pictures</li><li>200 edited photos</li><li>30-sheet album</li></ul>
+          <a class="btn btn-line" href="#enquire" data-pkg="Package 3 (₹26,999)">Choose this</a>
+        </article>
+        <article class="plan">
+          <div class="tier">Package 4</div>
+          <div class="pr">₹55,000</div>
+          <ul><li>Photo and video coverage</li><li>HD video and montage</li><li>Candid photography</li><li>Set of albums</li></ul>
+          <a class="btn btn-line" href="#enquire" data-pkg="Package 4 (₹55,000)">Choose this</a>
+        </article>
+        <article class="plan top">
+          <div class="tier">Package 5</div>
+          <div class="pr">₹1,75,000</div>
+          <ul><li>Photo and video coverage</li><li>Spot mixing and LED wall</li><li>Cinematic videography</li><li>Candid photography</li><li>HD full video, highlights and teaser</li><li>12 × 36 album and pendrive</li></ul>
+          <a class="btn btn-saffron" href="#enquire" data-pkg="Package 5 (₹1,75,000)">Choose this</a>
+        </article>
+      </div>
+      <p class="pk-note">Smaller events, newborn and baby shower shoots start lower. Ask on WhatsApp for Package 1 and current offers.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head">
+        <h2>Our work</h2>
+        <p>A few frames from recent weddings, newborn shoots, portraits and events.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter our work" id="filters"></div>
+      <div class="port" id="port"></div>
+    </div>
+  </section>
+
+  <section class="behind">
+    <div class="wrap">
+      <div class="ph">
+        <figure><img src="img/photographer.jpg" alt="A photographer in a navy blazer checking his camera" loading="lazy"></figure>
+        <figure><img src="img/bts.jpg" alt="Behind the scenes, a videographer filming a model on a bench with a gimbal" loading="lazy"></figure>
+      </div>
+      <div class="txt">
+        <h2>Behind the camera</h2>
+        <p>We shoot with gimbals, drones and studio lighting, and edit everything in-house, from a 30-second reel to a full wedding film.</p>
+        <ul><li>Cinematic videography</li><li>Candid photography</li><li>Podcasts and interviews</li><li>Brand and industrial films</li><li>LED wall and spot mixing</li><li>Albums and teasers</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <h2>How booking works</h2>
+        <p>Wedding season and weekend dates fill up first, so it helps to message early.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>Send your date</h3><p>Tell us the event, date and place. We reply on WhatsApp.</p></li>
+        <li><span class="n">2</span><h3>Choose a package</h3><p>We suggest the right package and adjust it to your day.</p></li>
+        <li><span class="n">3</span><h3>We shoot</h3><p>Our team arrives early with everything needed for photos and video.</p></li>
+        <li><span class="n">4</span><h3>Get your memories</h3><p>Edited photos, films, highlights and albums, delivered on time.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap faq">
+      <div><h2>Questions people ask</h2></div>
+      <div>
+        <details open><summary>Do you shoot in the studio or at our place?</summary><p>Both. Newborn and portrait shoots work well in the studio, and we travel to homes, halls, churches, temples and venues for events.</p></details>
+        <details><summary>Is it safe to photograph a newborn?</summary><p>Yes. Newborn sessions go at the baby's pace, with breaks for feeding and settling. Parents stay close the whole time.</p></details>
+        <details><summary>Can we customise a package?</summary><p>Yes. Every package can be adjusted to your functions, venue and number of days. Tell us what you need and we'll quote it.</p></details>
+        <details><summary>Do you cover corporate events?</summary><p>Yes. We cover conferences, launches and team events, and film brand and industrial videos and podcasts.</p></details>
+        <details><summary>How do we book?</summary><p>Fill in the form below. It opens WhatsApp with your details written out, and we confirm your date and the advance.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="enq" id="enquire">
+    <div class="wrap egrid">
+      <div class="side">
+        <h2>Tell us about your shoot</h2>
+        <p>Fill this in and tap send. It opens WhatsApp with everything written out, and we reply with availability.</p>
+        <div class="contact"><b>Alpha Productions</b><span>WhatsApp <span style="user-select:all">+91 72597 54035</span></span><span>or <span style="user-select:all">+91 63610 05748</span></span></div>
+      </div>
+      <form id="f" novalidate>
+        <div class="f"><label for="n">Your name</label><input id="n" autocomplete="name" placeholder="Ananya Rao"></div>
+        <div class="f"><label for="ph">Phone</label><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="98XXXXXXXX"></div>
+        <div class="f"><label for="ev">Shoot</label><select id="ev"></select></div>
+        <div class="f"><label for="d">Date</label><input id="d" type="date"></div>
+        <div class="f"><label for="pk">Package</label><select id="pk"><option>Not sure yet</option><option>Package 1</option><option>Package 2 (₹20,999)</option><option>Package 3 (₹26,999)</option><option>Package 4 (₹55,000)</option><option>Package 5 (₹1,75,000)</option></select></div>
+        <div class="f"><label for="v">Venue or area</label><input id="v" placeholder="Studio, home or venue name"></div>
+        <div class="f full"><label for="x">Anything else?</label><textarea id="x" placeholder="Number of days, functions, ideas for the shoot"></textarea></div>
+        <p class="err" id="e" hidden></p>
+        <div class="f full"><button class="btn btn-saffron" type="submit">Write my message</button></div>
+        <div class="out" id="o" hidden>
+          <div class="msg" id="m"></div>
+          <div class="row"><a class="btn btn-saffron" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a><button class="btn btn-line" type="button" id="cp">Copy message</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top"><img src="img/logo.jpg" alt="Alpha Productions logo" width="260" height="143"><b>ALPHA<span>PRODUCTIONS</span></b></a>
+      <ul><li><a href="https://www.instagram.com/alpha_production7/" target="_blank" rel="noopener">Instagram @alpha_production7</a></li><li>+91 72597 54035</li><li>+91 63610 05748</li></ul>
+    </div>
+    <div class="copy"><span>© 2026 Alpha Productions</span><span>Website by Ten Bit</span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mb"><div><b>Book your shoot</b><span>Weddings, newborn, events</span></div><a class="btn btn-saffron" href="#enquire">Book</a></div>
+
+<script>
+const WHATSAPP = "917259754035";
+const SVC = [
+  {n:"Weddings", img:"img/bride-ganesha.jpg", d:"Candid and traditional photos, cinematic films, highlights and albums of every ritual."},
+  {n:"Newborn", img:"img/newborn-bw.jpg", d:"Gentle studio sessions for the first weeks, at the baby's pace."},
+  {n:"Baby shower", img:"img/kalash.jpg", d:"Seemantham, godh bharai and gender reveals, every ritual and every guest."},
+  {n:"Pre-wedding and portraits", img:"img/lehenga-2.jpg", d:"Outdoor and studio portraits, couples and solo shoots."},
+  {n:"Proposals and engagements", img:"img/marry-me.jpg", d:"Rings, rose petals and candles, photographed as they happen."},
+  {n:"Corporate and brand films", img:"img/corporate-group.jpg", d:"Conferences, launches, podcasts and industrial videos."},
+];
+const PORT = [
+  ["bride-pink","wed"],["newborn-moon","baby"],["couple-bokeh","wed"],["conference","corp"],["mehendi-gold","wed"],["lehenga-path","port"],
+  ["church","wed"],["puja-smoke","wed"],["bw-portrait","port"],["groom","wed"],["rose-heart","wed"],["temple-mandap","wed"],
+  ["podcast","corp"],["bride-seated","wed"],["lehenga-1","port"],["mehendi-red","wed"],["industrial","corp"],["diya","wed"],["stage","wed"],["mehendi-jasmine","wed"]
+];
+const IMG = {"rose-heart":"img/rose-heart.jpg","industrial":"img/industrial.jpg","lehenga-2":"img/lehenga-2.jpg","mehendi-gold":"img/mehendi-gold.jpg","bw-portrait":"img/bw-portrait.jpg","bride-doors":"img/bride-doors.jpg","stage":"img/stage.jpg","church":"img/church.jpg","photographer":"img/photographer.jpg","couple-bokeh":"img/couple-bokeh.jpg","kalash":"img/kalash.jpg","puja-smoke":"img/puja-smoke.jpg","bts":"img/bts.jpg","temple-mandap":"img/temple-mandap.jpg","podcast":"img/podcast.jpg","lehenga-path":"img/lehenga-path.jpg","newborn-moon":"img/newborn-moon.jpg","conference":"img/conference.jpg","newborn-bw":"img/newborn-bw.jpg","couple-stairs":"img/couple-stairs.jpg","diya":"img/diya.jpg","mehendi-red":"img/mehendi-red.jpg","lehenga-1":"img/lehenga-1.jpg","groom":"img/groom.jpg","mehendi-jasmine":"img/mehendi-jasmine.jpg","bride-pink":"img/bride-pink.jpg","bride-ganesha":"img/bride-ganesha.jpg","bride-seated":"img/bride-seated.jpg","corporate-group":"img/corporate-group.jpg","marry-me":"img/marry-me.jpg"};
+document.getElementById("svc").innerHTML = SVC.map((s,i) => `<a class="sv" href="#enquire" data-ev="${s.n}"><figure><img src="${s.img}" alt="${s.n}" ${i>2?'loading="lazy"':''} decoding="async"></figure><h3>${s.n}</h3><p>${s.d}</p><span class="go">Ask about your date</span></a>`).join("");
+const F = [["all","Everything"],["wed","Weddings"],["baby","Newborn and baby"],["port","Portraits"],["corp","Corporate"]];
+document.getElementById("filters").innerHTML = F.map((f,i) => `<button type="button" data-f="${f[0]}" aria-pressed="${i===0}">${f[1]}</button>`).join("");
+const port = document.getElementById("port");
+port.innerHTML = PORT.map((p,i) => `<figure data-k="${p[1]}"><img src="${IMG[p[0]]}" alt="" loading="lazy" decoding="async"><span class="fr">${String(i+1).padStart(2,"0")}</span></figure>`).join("");
+document.getElementById("filters").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return;
+  document.querySelectorAll("#filters button").forEach(x => x.setAttribute("aria-pressed", x===b));
+  port.querySelectorAll("figure").forEach(el => el.hidden = !(b.dataset.f==="all" || el.dataset.k===b.dataset.f)); });
+const stripImgs = ["bride-doors","newborn-moon","couple-bokeh","mehendi-gold","lehenga-2","church","kalash","groom","bw-portrait","rose-heart"].map(k => IMG[k]);
+document.getElementById("strip").innerHTML = [...stripImgs,...stripImgs].map(s => `<figure><img src="${s}" alt=""></figure>`).join("");
+
+const evSel = document.getElementById("ev");
+SVC.forEach(s => evSel.insertAdjacentHTML("beforeend", `<option>${s.n}</option>`));
+evSel.insertAdjacentHTML("beforeend", "<option>Something else</option>");
+document.addEventListener("click", e => { const a = e.target.closest("[data-ev],[data-pkg]"); if (!a) return; if (a.dataset.ev) evSel.value = a.dataset.ev; if (a.dataset.pkg) document.getElementById("pk").value = a.dataset.pkg; });
+
+const mb = document.getElementById("mb");
+if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(e => mb.classList.toggle("away", e.isIntersecting)), {threshold:.1}).observe(document.getElementById("enquire"));
+
+document.getElementById("f").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const v = id => document.getElementById(id).value.trim(), err = document.getElementById("e");
+  if (!v("n") || !v("d")) { err.textContent = "Add your name and date so we can check availability."; err.hidden = false; return; }
+  err.hidden = true;
+  const dt = new Date(v("d") + "T00:00");
+  const dTxt = isNaN(dt) ? v("d") : dt.toLocaleDateString("en-IN", {weekday:"short", day:"numeric", month:"long", year:"numeric"});
+  const msg = `Hi Alpha Productions! I'd like to book a shoot.
+
+Name: ${v("n")}
+Shoot: ${v("ev")}
+Date: ${dTxt}
+Package: ${v("pk")}
+Venue/area: ${v("v") || "-"}
+Phone: ${v("ph") || "-"}
+${v("x") ? "\n" + v("x") + "\n" : ""}
+Is this date available?`;
+  document.getElementById("m").textContent = msg;
+  document.getElementById("wa").href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+  const o = document.getElementById("o"); o.hidden = false; o.scrollIntoView({behavior:"smooth", block:"nearest"});
+});
+document.getElementById("cp").addEventListener("click", e => {
+  const b = e.currentTarget, t = document.getElementById("m").textContent;
+  const sel = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("m")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Text selected, tap Copy"; };
+  try { navigator.clipboard.writeText(t).then(() => b.textContent = "Copied", sel); } catch(_) { sel(); }
+});
+</script>
+
+</body>
+</html>
